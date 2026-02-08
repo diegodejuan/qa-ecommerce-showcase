@@ -1,0 +1,26 @@
+{
+  "name": "qa-ecommerce-showcase",
+  "version": "1.0.0",
+  "description": "> **Proyecto de portfolio diseñado para demostrar capacidades técnicas y criterio de decisión de un QA Engineer**",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegodejuan/qa-ecommerce-showcase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/diegodejuan/qa-ecommerce-showcase/issues"
+  },
+  "homepage": "https://github.com/diegodejuan/qa-ecommerce-showcase#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.1"
+  }
+}
