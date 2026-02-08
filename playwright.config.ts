@@ -28,12 +28,13 @@ export default defineConfig({
 
   // Workers (tests en paralelo)
   // En CI: 1 worker, en local: según CPU
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 2 : '50%',
 
   // Reporter
   reporter: [
     ['html'], // HTML report interactivo
     ['list'], // Output en consola
+    ['allure-playwright'],
   ],
 
   // Configuración compartida para todos los tests
