@@ -40,7 +40,7 @@ export default defineConfig({
   use: {
     // Base URL de la app (cambiaremos cuando tengamos la app en Hostinger)
     baseURL: 'https://olive-jackal-150841.hostingersite.com/index.html',
-
+    ignoreHTTPSErrors: true,
     // Trace solo on failure (debugging visual)
     trace: 'on-first-retry',
 
