@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "ProBook Laptop 15",
+    "price": 1299.99,
+    "description": "Potente laptop de 15 pulgadas con procesador de ultima generacion, 16GB RAM y 512GB SSD. Ideal para profesionales y creadores de contenido.",
+    "image": "https://placehold.co/400x300?text=ProBook+Laptop+15",
+    "category": "Laptops",
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "name": "UltraBook Air 13",
+    "price": 999.99,
+    "description": "Ultrabook ultraligero de 13 pulgadas, perfecto para movilidad. 8GB RAM, 256GB SSD y hasta 12 horas de bateria.",
+    "image": "https://placehold.co/400x300?text=UltraBook+Air+13",
+    "category": "Laptops",
+    "stock": 22
+  },
+  {
+    "id": 3,
+    "name": "GameStation Pro 17",
+    "price": 1999.99,
+    "description": "Laptop gaming de alto rendimiento con pantalla de 17 pulgadas 144Hz, GPU dedicada, 32GB RAM y 1TB SSD.",
+    "image": "https://placehold.co/400x300?text=GameStation+Pro+17",
+    "category": "Laptops",
+    "stock": 8
+  },
+  {
+    "id": 4,
+    "name": "SmartPhone X200",
+    "price": 899.99,
+    "description": "Smartphone flagship con pantalla AMOLED de 6.7 pulgadas, triple camara de 108MP y carga rapida de 65W.",
+    "image": "https://placehold.co/400x300?text=SmartPhone+X200",
+    "category": "Smartphones",
+    "stock": 50
+  },
+  {
+    "id": 5,
+    "name": "SmartPhone Lite S10",
+    "price": 449.99,
+    "description": "Excelente relacion calidad-precio. Pantalla de 6.5 pulgadas, 128GB almacenamiento y camara dual de 64MP.",
+    "image": "https://placehold.co/400x300?text=SmartPhone+Lite+S10",
+    "category": "Smartphones",
+    "stock": 35
+  },
+  {
+    "id": 6,
+    "name": "SmartPhone Mini Z5",
+    "price": 299.99,
+    "description": "Compacto y potente. Pantalla de 5.8 pulgadas, ideal para quienes prefieren telefonos de tamano reducido sin sacrificar rendimiento.",
+    "image": "https://placehold.co/400x300?text=SmartPhone+Mini+Z5",
+    "category": "Smartphones",
+    "stock": 40
+  },
+  {
+    "id": 7,
+    "name": "Auriculares ProSound BT",
+    "price": 149.99,
+    "description": "Auriculares inalambricos con cancelacion de ruido activa, 30 horas de bateria y sonido Hi-Res certificado.",
+    "image": "https://placehold.co/400x300?text=Auriculares+ProSound",
+    "category": "Accessories",
+    "stock": 100
+  },
+  {
+    "id": 8,
+    "name": "Cargador Universal 100W",
+    "price": 49.99,
+    "description": "Cargador GaN compacto de 100W con 3 puertos USB-C y 1 USB-A. Compatible con laptops, tablets y smartphones.",
+    "image": "https://placehold.co/400x300?text=Cargador+100W",
+    "category": "Accessories",
+    "stock": 200
+  },
+  {
+    "id": 9,
+    "name": "Funda Universal Tablet",
+    "price": 29.99,
+    "description": "Funda protectora premium compatible con tablets de 10-12 pulgadas. Material resistente con soporte multiangulo.",
+    "image": "https://placehold.co/400x300?text=Funda+Tablet",
+    "category": "Accessories",
+    "stock": 150
+  },
+  {
+    "id": 10,
+    "name": "Teclado Mecanico RGB",
+    "price": 89.99,
+    "description": "Teclado mecanico con switches Cherry MX, retroiluminacion RGB personalizable y construccion en aluminio.",
+    "image": "https://placehold.co/400x300?text=Teclado+RGB",
+    "category": "Accessories",
+    "stock": 75
+  }
+]

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - TechHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" data-testid="logo">
+        <span class="header__logo-icon">&#9889;</span>
+        TechHub
+      </a>
+      <button class="header__menu-btn" data-testid="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <nav class="header__nav" data-testid="main-nav" role="navigation" aria-label="Navegacion principal">
+        <a href="index.html" class="header__link" data-testid="nav-home">Inicio</a>
+        <a href="cart.html" class="header__link" data-testid="nav-cart">
+          Carrito <span class="header__cart-count" data-testid="cart-count" style="display:none;">0</span>
+        </a>
+        <a href="login.html" class="header__link" data-testid="auth-link">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Checkout Content -->
+    <div class="checkout-layout" data-testid="checkout-content">
+
+      <!-- Checkout Form -->
+      <form class="checkout-form" data-testid="checkout-form" novalidate>
+        <h1 class="checkout-form__title" data-testid="checkout-title">Finalizar compra</h1>
+
+        <!-- Personal Info -->
+        <div class="checkout-form__section">
+          <h2 class="checkout-form__section-title">Datos personales</h2>
+          <div class="form-group">
+            <label for="checkout-name">Nombre completo</label>
+            <input
+              type="text"
+              id="checkout-name"
+              name="name"
+              placeholder="Tu nombre completo"
+              data-testid="checkout-name"
+              required
+              autocomplete="name"
+            >
+            <span class="form-group__error">Introduce tu nombre</span>
+          </div>
+          <div class="form-group">
+            <label for="checkout-email">Correo electronico</label>
+            <input
+              type="email"
+              id="checkout-email"
+              name="email"
+              placeholder="tu@email.com"
+              data-testid="checkout-email"
+              required
+              autocomplete="email"
+            >
+            <span class="form-group__error">Introduce un email valido</span>
+          </div>
+        </div>
+
+        <!-- Shipping Info -->
+        <div class="checkout-form__section">
+          <h2 class="checkout-form__section-title">Direccion de envio</h2>
+          <div class="form-group">
+            <label for="checkout-address">Direccion</label>
+            <input
+              type="text"
+              id="checkout-address"
+              name="address"
+              placeholder="Calle, numero, piso"
+              data-testid="checkout-address"
+              required
+              autocomplete="street-address"
+            >
+            <span class="form-group__error">Introduce tu direccion</span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkout-city">Ciudad</label>
+              <input
+                type="text"
+                id="checkout-city"
+                name="city"
+                placeholder="Tu ciudad"
+                data-testid="checkout-city"
+                required
+                autocomplete="address-level2"
+              >
+              <span class="form-group__error">Introduce tu ciudad</span>
+            </div>
+            <div class="form-group">
+              <label for="checkout-zip">Codigo postal</label>
+              <input
+                type="text"
+                id="checkout-zip"
+                name="zip"
+                placeholder="28001"
+                data-testid="checkout-zip"
+                required
+                autocomplete="postal-code"
+              >
+              <span class="form-group__error">Introduce un codigo postal valido</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Info -->
+        <div class="checkout-form__section">
+          <h2 class="checkout-form__section-title">Datos de pago</h2>
+          <div class="form-group">
+            <label for="checkout-card-number">Numero de tarjeta</label>
+            <input
+              type="text"
+              id="checkout-card-number"
+              name="cardNumber"
+              placeholder="1234 5678 9012 3456"
+              data-testid="checkout-card-number"
+              required
+              maxlength="19"
+              autocomplete="cc-number"
+            >
+            <span class="form-group__error">Introduce un numero de tarjeta valido</span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkout-card-expiry">Fecha de expiracion</label>
+              <input
+                type="text"
+                id="checkout-card-expiry"
+                name="cardExpiry"
+                placeholder="MM/AA"
+                data-testid="checkout-card-expiry"
+                required
+                maxlength="5"
+                autocomplete="cc-exp"
+              >
+              <span class="form-group__error">Formato: MM/AA</span>
+            </div>
+            <div class="form-group">
+              <label for="checkout-card-cvc">CVC</label>
+              <input
+                type="text"
+                id="checkout-card-cvc"
+                name="cardCvc"
+                placeholder="123"
+                data-testid="checkout-card-cvc"
+                required
+                maxlength="4"
+                autocomplete="cc-csc"
+              >
+              <span class="form-group__error">Introduce el CVC</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full" data-testid="place-order-btn">
+          &#128274; Confirmar pedido
+        </button>
+      </form>
+
+      <!-- Order Summary -->
+      <div class="order-summary" data-testid="order-summary">
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" data-testid="checkout-success" style="display: none;">
+      <div class="success-message__icon">&#9989;</div>
+      <h1 class="success-message__title" data-testid="success-title">Pedido confirmado!</h1>
+      <p class="success-message__text">Gracias por tu compra. Hemos enviado un email de confirmacion.</p>
+      <p class="success-message__text">Tu numero de pedido es:</p>
+      <span class="success-message__order-id" data-testid="order-id"></span>
+      <div style="margin-top: 2rem;">
+        <a href="index.html" class="btn btn--primary" data-testid="back-home-btn">Volver a la tienda</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <p class="footer__text">&copy; 2025 TechHub. Todos los derechos reservados.</p>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Sobre nosotros</a>
+        <a href="#" class="footer__link">Contacto</a>
+        <a href="#" class="footer__link">Politica de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

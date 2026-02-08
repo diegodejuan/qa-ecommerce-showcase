@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto - TechHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="product">
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" data-testid="logo">
+        <span class="header__logo-icon">&#9889;</span>
+        TechHub
+      </a>
+      <button class="header__menu-btn" data-testid="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <nav class="header__nav" data-testid="main-nav" role="navigation" aria-label="Navegacion principal">
+        <a href="index.html" class="header__link" data-testid="nav-home">Inicio</a>
+        <a href="cart.html" class="header__link" data-testid="nav-cart">
+          Carrito <span class="header__cart-count" data-testid="cart-count" style="display:none;">0</span>
+        </a>
+        <a href="login.html" class="header__link" data-testid="auth-link">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Loading State -->
+    <div class="loading" data-testid="loading">
+      <div class="loading__spinner" role="status" aria-label="Cargando producto"></div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail" data-testid="product-detail" aria-label="Detalle del producto">
+    </section>
+
+    <!-- Back link -->
+    <div style="margin-top: 1.5rem;">
+      <a href="index.html" class="btn btn--secondary" data-testid="back-to-store">
+        &larr; Volver a la tienda
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <p class="footer__text">&copy; 2025 TechHub. Todos los derechos reservados.</p>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Sobre nosotros</a>
+        <a href="#" class="footer__link">Contacto</a>
+        <a href="#" class="footer__link">Politica de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

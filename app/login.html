@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TechHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" data-testid="logo">
+        <span class="header__logo-icon">&#9889;</span>
+        TechHub
+      </a>
+      <button class="header__menu-btn" data-testid="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <nav class="header__nav" data-testid="main-nav" role="navigation" aria-label="Navegacion principal">
+        <a href="index.html" class="header__link" data-testid="nav-home">Inicio</a>
+        <a href="cart.html" class="header__link" data-testid="nav-cart">
+          Carrito <span class="header__cart-count" data-testid="cart-count" style="display:none;">0</span>
+        </a>
+        <a href="login.html" class="header__link header__link--active" data-testid="auth-link">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="form-container">
+      <div class="form-card">
+        <h1 class="form-card__title" data-testid="auth-title">Bienvenido</h1>
+        <p class="form-card__subtitle" data-testid="auth-subtitle">Inicia sesion o crea tu cuenta</p>
+
+        <!-- Tabs -->
+        <div class="form-tabs" role="tablist">
+          <button class="form-tabs__tab form-tabs__tab--active" data-testid="login-tab" role="tab" aria-selected="true">
+            Iniciar sesion
+          </button>
+          <button class="form-tabs__tab" data-testid="register-tab" role="tab" aria-selected="false">
+            Registrarse
+          </button>
+        </div>
+
+        <!-- Login Form -->
+        <form data-testid="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email">Correo electronico</label>
+            <input
+              type="email"
+              id="login-email"
+              name="email"
+              placeholder="tu@email.com"
+              data-testid="login-email"
+              required
+              autocomplete="email"
+            >
+            <span class="form-group__error" data-testid="login-email-error">Introduce un email valido</span>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Contrasena</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              placeholder="Tu contrasena"
+              data-testid="login-password"
+              required
+              autocomplete="current-password"
+            >
+            <span class="form-group__error" data-testid="login-password-error">La contrasena debe tener al menos 3 caracteres</span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" data-testid="login-submit">
+            Iniciar sesion
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form data-testid="register-form" style="display: none;" novalidate>
+          <div class="form-group">
+            <label for="register-name">Nombre completo</label>
+            <input
+              type="text"
+              id="register-name"
+              name="name"
+              placeholder="Tu nombre"
+              data-testid="register-name"
+              required
+              autocomplete="name"
+            >
+            <span class="form-group__error" data-testid="register-name-error">El nombre debe tener al menos 2 caracteres</span>
+          </div>
+          <div class="form-group">
+            <label for="register-email">Correo electronico</label>
+            <input
+              type="email"
+              id="register-email"
+              name="email"
+              placeholder="tu@email.com"
+              data-testid="register-email"
+              required
+              autocomplete="email"
+            >
+            <span class="form-group__error" data-testid="register-email-error">Introduce un email valido</span>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Contrasena</label>
+            <input
+              type="password"
+              id="register-password"
+              name="password"
+              placeholder="Minimo 6 caracteres"
+              data-testid="register-password"
+              required
+              autocomplete="new-password"
+            >
+            <span class="form-group__error" data-testid="register-password-error">La contrasena debe tener al menos 6 caracteres</span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" data-testid="register-submit">
+            Crear cuenta
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <p class="footer__text">&copy; 2025 TechHub. Todos los derechos reservados.</p>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Sobre nosotros</a>
+        <a href="#" class="footer__link">Contacto</a>
+        <a href="#" class="footer__link">Politica de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
